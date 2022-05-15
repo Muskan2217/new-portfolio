@@ -1,0 +1,158 @@
+
+
+
+@media (max-width: 767px) {
+  
+
+  // nav starts-----------------------
+
+.myNav{
+
+ padding: 1.5rem 4rem 0;
+
+.menu-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+
+// -----------------------------
+.hamburger-menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  
+  &__logo {
+    // margin: .5rem 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  &__ctrl {
+  //  margin: 0 0 0 auto;
+
+   &--button {
+    //  margin: -2px 1rem 0;
+     padding: 5px;
+     cursor: pointer;
+     z-index: 20;
+     position: relative;
+
+     span {
+       display: block;
+       height: 3px;
+       width: 31px;
+       background-color: $white;
+       margin: 5px 0px 5px 0px;
+       transition: all 700ms ease-in-out;
+       transform: none;
+       z-index: 10;
+      }
+    }
+  }
+}
+
+
+
+.menu_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -10;
+
+  opacity: 0;
+
+  margin-top: 0;
+  text-align: center;
+  transition: all 700ms ease-in-out;
+
+      ul {
+         
+          transform: translateY(15vh);
+          // margin-top: -25px;
+          // margin-top: 22px;
+          background-color: $blue;
+           align-items: center;
+         transition: all .7s ease-in-out;
+
+       li {
+        
+
+      a {
+        
+               font-size: 1.4rem;
+          letter-spacing: 3px;
+       
+      }
+    }
+
+    .btn{
+      width: 150px;
+  font-size: 1.4rem;
+    }
+
+    li:hover {
+      background-color: $maincolor;
+      a{
+         letter-spacing: 1px;
+        //  color: $white;
+          font-size: 1.2rem;
+      }
+    }
+
+    // --------------
+    .btn {
+   
+      border-top: 1px solid $maincolor;
+      border-bottom: 1px solid $maincolor;
+      
+    }
+
+      }
+
+   
+
+}
+#menustate:checked ~ .hamburger-menu span:nth-of-type(1) {
+  transform: translate(0, 10px) rotate(-40deg);
+  position: relative;
+  background-color: #fff;
+  height: 4px;
+}
+
+
+#menustate:checked ~ .hamburger-menu span:nth-of-type(2) {
+  transform: rotate(40deg) translateX(0px);
+  position: relative;
+background-color: $blue;
+  height: 5px;
+}
+
+#menustate:checked ~ .hamburger-menu span:nth-of-type(3) {
+  opacity: 0;
+}
+
+
+
+#menustate:checked ~ .menu_content {
+  z-index: 1;
+  opacity: .9;
+}
+#menustate:checked ~ .menu_content ul {
+ padding: 1.5rem 4rem;
+      flex-direction: column;
+      height: 340px;
+}
+#menustate:checked ~ .menu_content ul li{
+        width: 120px;
+      height: 30px;
+      padding-top: .7rem;
+}
+
+}
+
+
+
+}

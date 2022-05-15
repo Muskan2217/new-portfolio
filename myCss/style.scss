@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Twinkle+Star&display=swap");
+
+// variables-------------------------------------------------------
+
+$blue: #2147de;
+$green: #75bd29;
+$seagreen: #19beb6;
+$darkgreen: #6bb522cc;
+$orange: #df9801;
+$gray: #757575;
+$darkslategray: darkslategray;
+$bgcolor: #0a192f;
+$bgcolor: #171923;
+$maincolor: #0d264ffb;
+$maincolor: #11121b;
+$white: #cdcdf3;
+$red: #a92446;
+
+// -----------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chakra Petch", sans-serif;
+
+
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: 1.3rem;
+    transition: 0.5s;
+  }
+}
+
+// -----------------
+html {
+  scroll-behavior: smooth;
+  background-color: $bgcolor;
+  color: $white;
+  font-size: 93%;
+  overflow-x: hidden;
+}
+
+.flex_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body > section {
+  padding: 3rem;
+  transition: 0.5s;
+}
+
+h2 {
+  width: 85%;
+  width: 350px;
+  font-size: 2.7rem;
+  
+   @media (max-width:767px) {
+    &{
+     width: 250px;
+    }
+}
+}
+
+@mixin samepro($margin) {
+  h2::after {
+    content: "";
+    height: 1px;
+    width: 150px;
+    display: block;
+    background-color: $blue;
+    margin-left: $margin;
+    margin-top: -10px;
+  }
+
+   @media (max-width:767px) {
+     &{
+         h2::after {
+   
+    width: 85px;
+  
+  }
+     }
+   }
+
+}
+// ---++++++++++++++++++++++++++++++++++++----------
+
+// -----------------------------left right fixed area --------------------------------------
+
+.links,
+.email {
+  width: 150px;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  padding: 4%;
+  background-color: $bgcolor;
+  top: 13.7%;
+}
+.links {
+  bottom: 0;
+  left: 0;
+
+  .my_links {
+    height: 180px;
+    flex-direction: column;
+    align-items: center;
+
+    a:hover {
+      color: $blue;
+      transform: translateY(-3px);
+    }
+  }
+}
+.links::after {
+  content: "";
+  background: $white;
+  display: block;
+  width: 2px;
+  height: 180px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+// ----------------------------------
+.email {
+  bottom: 0;
+  right: 0;
+
+  a {
+    p {
+      font-size: 1.1rem;
+      transform: rotate(90deg);
+    }
+  }
+
+  p:hover {
+    transition: 0.3s;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: $blue;
+  }
+}
+.email::after {
+  content: "";
+  background: $white;
+  display: block;
+  width: 2px;
+  height: 180px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+//================================== nav starts from here=======================================================
+.myNav {
+  width: 100%;
+  height: 85px;
+  padding: 1rem 4rem 0;
+  z-index: 999;
+  align-items: top;
+  transition: top 1s;
+  background-color: $bgcolor;
+  .logo {
+    width: 35px;
+    img {
+      width: 100%;
+      //
+    }
+  }
+  // -------------------
+
+  
+  ul {
+    list-style: none;
+
+    li {
+      text-transform: capitalize;
+      transition: 0.3s;
+      a {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    a:hover {
+      color: $blue;
+    }
+
+    // --------------
+    .btn {
+      width: 120px;
+      height: 30px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      border: none;
+      background: none;
+      letter-spacing: 3px;
+      color: $white;
+      border-top: 1px solid $blue;
+      border-bottom: 1px solid $blue;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .btn:hover {
+      border: none;
+      background-color: $maincolor;
+      color: $blue;
+      letter-spacing: 1px;
+    }
+  }
+}
+// nav ends ------------
+// ================================= home sectionn starts =====================================================================================
+
+#home {
+  width: 100%;
+  flex-direction: column;
+  padding: 8% 0 7.5%;
+  background: linear-gradient(
+      rgba(6, 12, 41, 0.911),
+      rgba(4, 4, 27, 0.762),
+      rgba(9, 12, 46, 0.945)
+    ),
+    url("../img/banner2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  text-align: center;
+  overflow: hidden;
+  h1 {
+    font-size: 3.8rem;
+    padding: 2rem 0 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: $blue;
+    font-weight: 800;
+  text-shadow: 1px 1px 1px #000;
+  margin: 0 auto;
+
+       
+
+
+  }
+
+
+  
+
+
+  h3 {
+    font-size: 1.7rem;
+  }
+  a {
+    width: 170px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    border-bottom: 1px solid $blue;
+    border-left: 1px solid $blue;
+    color: $white;
+    text-align: center;
+    padding: 10px;
+    transition: 500ms;
+    font-weight: 500;
+    margin: 35px auto;
+  }
+
+  a:hover {
+    background-color: $maincolor;
+    box-shadow: none;
+  }
+
+  // about link
+
+  .about {
+    border: none;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+  }
+
+  .about:hover {
+    background: none;
+    letter-spacing: 1px;
+  }
+
+  hr{
+    display: inline-block;
+    width: 1.7px;
+    height: 90px;
+    border: none;
+    background-color: $blue;
+    animation-duration: 3000ms;
+    animation-name: scrolldown;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    margin: 0 auto;
+  }
+}
+/* Animation Keyframes */
+@keyframes scrolldown {
+  0% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+// home ends--------------------
+//================================= about section starts from here ====================================================
+
+#about {
+  width: 100%;
+  padding-bottom: 0;
+  @include samepro(200px);
+  @media (max-width:767px) {
+    &{
+     @include samepro(130px);
+    }
+} 
+  //  --------------------
+  .about_me {
+    padding: 3rem 1rem 0;
+    .para {
+      width: 100%;
+      //  text-align: center;
+
+      h4 {
+        font-size: 1.3rem;
+        padding: 0rem 0 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        span {
+          color: $blue;
+        }
+      }
+
+      h5 {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+      }
+      .box {
+        padding-left: 1rem;
+
+        .box_list {
+          width: 50%;
+          ul {
+            li {
+              width: 50%;
+            }
+          }
+        }
+        img {
+          width: 38%;
+          transform: scaleX(-1);
+          opacity: 0.8;
+          // margin-right: 10%;
+        }
+      }
+      .box * {
+        padding-top: 0.8rem;
+      }
+    }
+
+    // -----------------
+    .imag_box {
+      width: 400px;
+      justify-content: center;
+      margin-top: -425px;
+      margin-left: 35%;
+      img {
+        width: 80%;
+
+        transform: scaleX(-1);
+        opacity: 0.9;
+      }
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// about ends here--------------
+//=================================== survice section starts here ==============================================================================
+
+#survice {
+  width: 100%;
+  text-align: center;
+padding-top: 0;
+  h2 {
+    padding-bottom: 2rem;
+   margin: 0 auto;
+  }
+  h5 {
+    color: $blue;
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+  }
+
+  .my_survice_inner {
+    .survice {
+      flex: 1 1 220px;
+      margin: 1rem;
+      // width: 32%;
+      border-radius: 2%;
+      padding: 1.4rem;
+      // margin-bottom: 5%;
+      background-color: $maincolor;
+      transition: 1s;
+      cursor: pointer;
+      text-align: left;
+      transition: all 1s ease-in-out;
+
+      span {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+        transition: 0.3s;
+        padding: 1.5rem 0;
+      }
+      p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+      }
+    }
+
+    .icon {
+      color: $blue;
+      transition: 500ms;
+    }
+
+    .survice:hover {
+      background-color: $blue;
+      transform: translateY(-5px);
+      .icon {
+        transform: scaleX(-1);
+      }
+      h3,
+      p,
+      .icon {
+        color: $bgcolor;
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// service sec ends---------------
+
+// =====================================portfolio showcase starts=============================================================================================
+
+#showcase {
+  text-align: center;
+
+  h2 {
+    padding-bottom: 2rem;
+  }
+  h5 {
+    color: $blue;
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+  }
+
+  h5,
+  h2 {
+    width: 100%;
+  }
+  .showcase_img {
+    .pic {
+      flex: 1 1 255px;
+      height: 250px;
+      margin: 1.5rem 0.8rem;
+      overflow: hidden;
+      position: relative;
+      border-top: 4px solid $blue;
+      transition: 0.5s;
+      img {
+        width: 100%;
+        transition: 0.2s;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #184cd0ed;
+        opacity: 0;
+        transform: translateY(100%);
+        text-align: center;
+        transition: 0.5s;
+        padding: 0.8rem;
+
+        ul {
+          width: 100%;
+          text-align: left;
+          padding-left: 1.8rem;
+          font-size: 1.2rem;
+          color: $maincolor;
+          font-weight: 800;
+          li {
+            font-size: 1rem;
+            margin-top: 0.3rem;
+            margin-left: 1.5rem;
+          }
+        }
+
+        a,
+        h4 {
+          width: 100%;
+          letter-spacing: 2px;
+          color: $maincolor;
+          font-weight: 600;
+        }
+
+        h4 {
+          color: $maincolor;
+          font-size: 2rem;
+          letter-spacing: 2px;
+        }
+
+        a:hover {
+          letter-spacing: 1px;
+          color: $white;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .pic:hover {
+    img {
+      transform: scale(1.07);
+    }
+
+    .overlay {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+// portfolio sec ends here----------------
+// ======================================== contact start =========================
+#contact {
+  width: 100%;
+  background-color: $maincolor;
+      padding: 3rem 5rem;
+  @include samepro(247px);
+  @media (max-width:767px) {
+    &{
+     @include samepro(170px);
+    }
+} 
+  .contact_inner {
+    margin-top: 5rem;
+    flex-direction: row;
+    .left_area {
+      flex-direction: column;
+      width: 40%;
+      a {
+        font-size: 1rem;
+        width: 250px;
+      }
+      .fa {
+        background-color: $bgcolor;
+        font-size: 2rem;
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+        margin-right: 0.5rem;
+        transition: 0.5s;
+      }
+      .fa-envelope {
+        font-size: 1.7rem;
+      }
+      .fa-map-marker {
+        padding: 1rem 1.9rem;
+      }
+
+      a:hover {
+        color: $blue;
+
+        .fa {
+          color: $blue;
+        }
+        .fa {
+          box-shadow: 0.5px 0.5px 24px $blue;
+        }
+      }
+    }
+  }
+//     // -------------
+
+    .right_area {
+      width: 45%;
+      text-align: center;
+      justify-content: center;
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        span {
+          font-size: 2.5rem;
+          color: $blue;
+        }
+      }
+      p {
+        margin-top: 3rem;
+        width: 230px;
+        color: $gray;
+        font-size: 1.1rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+// contact ends here---------------------------
+// ================================= footer =======================================================================================
+
+#footer {
+ 
+  background-color: $maincolor;
+padding-top: 2rem;
+padding-bottom: 2rem;
+  border-top: 1px solid $bgcolor;
+
+  justify-content: flex-end;
+
+  a {
+    color: $white;
+    font-size: 1rem;
+    width: 9%;
+    font-weight: 300;
+    opacity: 0.5;
+    transition: 0.3s;
+    letter-spacing: 3px;
+   width: 100px;
+  }
+
+  a:hover {
+    color: $blue;
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+
+// --------------------------------------
+
+// @import "button";
+@import "responsive";
+@import "hamburger";

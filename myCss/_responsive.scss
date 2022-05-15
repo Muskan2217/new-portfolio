@@ -1,0 +1,182 @@
+//  min width --------------
+@media (min-width: 1000px) {
+
+  body > section {
+    padding: 5rem 11rem;
+  }
+
+  #contact{
+    padding: 3rem 15rem;
+  }
+
+}
+@media (min-width: 767px) {
+
+ 
+  // nav starts-----------------------
+  .myNav {
+  
+
+   /* hemburgure/Nav Icon */
+
+    .menu-checkbox, .hamburger-menu{
+      display: none;
+    }
+ 
+  // menu---------------
+    ul {
+      width: 70vw;
+      padding-top: 0.5rem;
+
+      li {
+        a::after {
+          content: "";
+          display: block;
+          width: 0px;
+          height: 1px;
+          background-color: $blue;
+          margin-top: 0.2rem;
+          transition: 0.3s;
+
+        }
+      }
+
+      li:hover {
+        a::after {
+          width: 20px;
+          transform: translateX(10px);
+        }
+      }
+
+      .btn {
+        margin-left: 75px;
+      }
+    }
+  }
+
+  // about ----------------------------
+  #about {
+    h2 {
+      padding-bottom: 3rem;
+    }
+
+    .about_me {
+      background: url("../img/musk3.png");
+      background-position: top right;
+      background-repeat: no-repeat;
+
+      .para {
+        width: 80%;
+        margin-top: 0;
+        text-align: left;
+
+        .box {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++
+// max-width----------------
+@media (max-width: 1000px) {
+
+  
+  .links,
+  .email {
+    display: none;
+  }
+
+  #about {
+    .about_me {
+      .para {
+        .box {
+          .box_list {
+            width: 20%;
+            ul {
+              flex-direction: column;
+              li {
+                width: 100%;
+                padding-top: 2.3rem;
+                font-size: 2.7vw;
+              }
+            }
+          }
+
+          img {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+// ======================================
+@media (max-width: 750px) {
+  html {
+  
+  font-size:65%;
+}
+  #about {
+    .about_me {
+      .para {
+        .box {
+          .box_list {
+            width: 100%;
+            ul {
+              flex-direction: row;
+              li {
+                width: 50%;
+              }
+            }
+          }
+
+          img {
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+// footer
+#footer{
+
+  a{
+    width: 80px;
+  }
+}
+}
+
+
+@media (max-width: 460px) {
+    // contact---------------------
+
+  #contact {
+    .contact_inner {
+      .left_area {
+        width: 100%;
+      
+      }
+
+      // -------------
+
+      .right_area {
+        width: 100%;
+  padding-top: 2rem;
+    
+      }
+    }
+  }
+
+  // footer
+#footer{
+justify-content: center;
+}
+}
