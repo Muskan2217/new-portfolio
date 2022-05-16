@@ -7,8 +7,8 @@
   // nav starts-----------------------
 
 .myNav{
-
- padding: 1.5rem 4rem 0;
+height: 70px;
+ padding: 1.5rem 2.5rem;
 
 .menu-checkbox {
   width: 0;
@@ -72,7 +72,7 @@
          
           transform: translateY(15vh);
           // margin-top: -25px;
-          // margin-top: 22px;
+          margin-top: -2%;
           background-color: $blue;
            align-items: center;
          transition: all .7s ease-in-out;
@@ -82,7 +82,7 @@
 
       a {
         
-               font-size: 1.4rem;
+         font-size: 1.4rem;
           letter-spacing: 3px;
        
       }
@@ -90,7 +90,9 @@
 
     .btn{
       width: 150px;
-  font-size: 1.4rem;
+
+            a{font-size: 1.2rem;}
+
     }
 
     li:hover {
